@@ -10,12 +10,10 @@ import popImage from '../../images/049-singer.png';
 
 
 const BrowseContainer = () => {
-  const [rock, pop, bollywood, country, callComplete] = useMusicDetails();
+  const [data, callComplete] = useMusicDetails();
   localStorage.removeItem('songs');
   const songs = JSON.parse(localStorage.getItem('songs') || '[]');
-  songs.push({
-    rock, pop, bollywood, country, callComplete,
-  });
+  songs.push({ data });
   localStorage.setItem('songs', JSON.stringify(songs));
   if (callComplete) {
     return (

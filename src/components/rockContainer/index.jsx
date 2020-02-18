@@ -4,12 +4,22 @@ import Card from '../card';
 
 
 const RockContainer = () => {
-  const records = JSON.parse(localStorage.getItem('songs'));
-  const rockRecords = records[0].rock;
-  const rockRecs = [...rockRecords].map((rec) => (
+  const rec = JSON.parse(localStorage.getItem('songs'));
+  const records = rec[0].data;
+  let i = 0;
+  // eslint-disable-next-line prefer-const
+  let rockRecords = [];
+  while (i < records.length) {
+    const { genres } = records[i];
+    if (genres.includes('rock')) {
+      rockRecords.push(records[i]);
+    }
+    i += 1;
+  }
+  const rockRecs = [...rockRecords].map((song) => (
     <Card
-      img={rec.albumArtUrl}
-      text={rec.name}
+      img={song.albumArtUrl}
+      text={song.name}
       alt="record"
     />
   ));

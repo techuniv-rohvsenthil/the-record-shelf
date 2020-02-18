@@ -2,10 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const useMusicDetails = () => {
-  const [rock, setRock] = useState([]);
-  const [pop, setPop] = useState([]);
-  const [bollywood, setBollywood] = useState([]);
-  const [country, setCountry] = useState([]);
+  const [data, setData] = useState([]);
   const [callComplete, setCallComplete] = useState(null);
   useEffect(() => {
     const someFunc = async () => {
@@ -17,23 +14,7 @@ const useMusicDetails = () => {
         });
         const response = await instance.get('/records');
         const records = response.data.data;
-        let i = 0;
-        while (i < records.length) {
-          const { genres } = records[i];
-          if (genres.includes('pop')) {
-            setPop([...pop, records[i]]);
-          }
-          if (genres.includes('rock')) {
-            setRock([...rock, records[i]]);
-          }
-          if (genres.includes('bollywood')) {
-            setBollywood([...bollywood, records[i]]);
-          }
-          if (genres.includes('country')) {
-            setCountry([...country, records[i]]);
-          }
-          i += 1;
-        }
+        setData(records);
         setCallComplete(true);
       } catch (err) {
         setCallComplete(false);
@@ -41,6 +22,6 @@ const useMusicDetails = () => {
     };
     someFunc();
   }, []);
-  return [rock, pop, bollywood, country, callComplete];
+  return [data, callComplete];
 };
 export default useMusicDetails;

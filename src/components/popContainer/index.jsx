@@ -4,12 +4,22 @@ import Card from '../card';
 
 
 const PopContainer = () => {
-  const records = JSON.parse(localStorage.getItem('songs'));
-  const popRecords = records[0].pop;
-  const popRecs = [...popRecords].map((rec) => (
+  const rec = JSON.parse(localStorage.getItem('songs'));
+  const records = rec[0].data;
+  let i = 0;
+  // eslint-disable-next-line prefer-const
+  let popRecords = [];
+  while (i < records.length) {
+    const { genres } = records[i];
+    if (genres.includes('pop')) {
+      popRecords.push(records[i]);
+    }
+    i += 1;
+  }
+  const popRecs = [...popRecords].map((song) => (
     <Card
-      img={rec.albumArtUrl}
-      text={rec.name}
+      img={song.albumArtUrl}
+      text={song.name}
       alt="record"
     />
   ));

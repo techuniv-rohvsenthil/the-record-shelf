@@ -4,12 +4,22 @@ import Card from '../card';
 
 
 const BollywoodContainer = () => {
-  const records = JSON.parse(localStorage.getItem('songs'));
-  const bollywoodRecords = records[0].bollywood;
-  const bollyRecs = [...bollywoodRecords].map((rec) => (
+  const rec = JSON.parse(localStorage.getItem('songs'));
+  const records = rec[0].data;
+  let i = 0;
+  // eslint-disable-next-line prefer-const
+  let bollywoodRecords = [];
+  while (i < records.length) {
+    const { genres } = records[i];
+    if (genres.includes('bollywood')) {
+      bollywoodRecords.push(records[i]);
+    }
+    i += 1;
+  }
+  const bollyRecs = [...bollywoodRecords].map((song) => (
     <Card
-      img={rec.albumArtUrl}
-      text={rec.name}
+      img={song.albumArtUrl}
+      text={song.name}
       alt="record"
     />
   ));
