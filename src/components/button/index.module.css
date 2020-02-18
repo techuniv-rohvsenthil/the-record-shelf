@@ -1,0 +1,11 @@
+.button{
+    background-color: rgb(113, 235, 32);
+    height: 3rem;
+    width: 10em;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    margin: 1rem;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
