@@ -1,13 +1,11 @@
 import React from 'react';
 import './index.css';
-import Button from '../button';
-import Header from '../header';
+import RecordShelfContainer from '../recordShelfContainer';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Button testID="sync-button" click={() => {}}>sync</Button>
+      <RecordShelfContainer />
     </div>
   );
 }

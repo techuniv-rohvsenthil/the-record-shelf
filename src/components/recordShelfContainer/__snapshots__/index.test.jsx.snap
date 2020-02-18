@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the RecordShelfContainer component should render correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <div>
+        The
+      </div>
+      <div>
+        Record
+      </div>
+      <div>
+        Shelf
+      </div>
+    </div>
+    <button
+      data-testid="sync-btn"
+      type="button"
+    >
+      sync
+    </button>
+  </div>
+</DocumentFragment>
+`;
