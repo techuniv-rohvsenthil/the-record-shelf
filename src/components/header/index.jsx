@@ -7,7 +7,7 @@ const Header = () => (
     <div className={styles.normalText}>
       The
     </div>
-    <div className={styles.boldText}>
+    <div className={styles.bolderText}>
       Record
     </div>
     <div className={styles.normalText}>

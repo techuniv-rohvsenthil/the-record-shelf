@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SyncContainer from './index';
+import BrowseContainer from './index';
 
 
-xdescribe('the SyncContainer component', () => {
+xdescribe('the BrowseContainer component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<SyncContainer />);
+    const { asFragment } = render(<BrowseContainer />);
 
     expect(asFragment()).toMatchSnapshot();
   });

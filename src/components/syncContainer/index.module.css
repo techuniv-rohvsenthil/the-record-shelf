@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.displayText{
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    margin: 2rem;
+    font-size: 2rem;
+}
