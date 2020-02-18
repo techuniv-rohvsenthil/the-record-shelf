@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import RecordShelfContainer from './index';
+import SyncContainer from './index';
 
 
-describe('the RecordShelfContainer component', () => {
+describe('the SyncContainer component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<RecordShelfContainer />);
+    const { asFragment } = render(<SyncContainer />);
 
     expect(asFragment()).toMatchSnapshot();
   });
