@@ -5,9 +5,8 @@ import BrowseContainer from './index';
 
 
 describe('the BrowseContainer component', () => {
-  xit('should render correctly', () => {
+  it('should render correctly', () => {
     const { asFragment } = render(<BrowseContainer />);
-
     expect(asFragment()).toMatchSnapshot();
   });
 
