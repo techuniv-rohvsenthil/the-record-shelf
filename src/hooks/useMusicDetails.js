@@ -34,12 +34,6 @@ const useMusicDetails = () => {
           }
           i += 1;
         }
-        localStorage.removeItem('songs');
-        const songs = JSON.parse(localStorage.getItem('songs') || '[]');
-        songs.push({
-          rock, pop, bollywood, country,
-        });
-        localStorage.setItem('songs', JSON.stringify(songs));
         setCallComplete(true);
       } catch (err) {
         setCallComplete(false);

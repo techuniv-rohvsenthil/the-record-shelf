@@ -1,4 +1,15 @@
 .container{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.titleText{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    margin: 2rem;
+    font-weight: 900;
+    font-size: 2rem;
 }

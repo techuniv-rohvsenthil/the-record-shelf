@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import * as styles from './index.module.css';
 
 
-const PopContainer = () => {
-  console.log(localStorage.getItem('songs'));
+const PopContainer = ({ pop }) => {
+  console.log(pop);
   return (
     <div className={styles.container} />
   );

@@ -9,31 +9,29 @@ import PopContainer from '../popContainer';
 import RockContainer from '../rockContainer';
 import Header from '../header';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <SyncContainer />
-          </Route>
-          <Route exact path="/browse">
-            <BrowseContainer />
-          </Route>
-          <Route exact path="/pop">
-            <PopContainer />
-          </Route>
-          <Route exact path="/rock">
-            <RockContainer />
-          </Route>
-          <Route exact path="*">
-            <BrowseContainer />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Header />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <SyncContainer />
+        </Route>
+        <Route exact path="/browse">
+          <BrowseContainer />
+        </Route>
+        <Route exact path="/pop">
+          <PopContainer />
+        </Route>
+        <Route exact path="/rock">
+          <RockContainer />
+        </Route>
+        <Route exact path="*">
+          <BrowseContainer />
+        </Route>
+      </Switch>
+    </Router>
+  </div>
+);
 
 export default App;
