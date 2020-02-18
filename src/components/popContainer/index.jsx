@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './index.module.css';
-import Card from '../card';
+import SongCard from '../songCard';
 
 
 const PopContainer = () => {
@@ -17,9 +17,9 @@ const PopContainer = () => {
     i += 1;
   }
   const popRecs = [...popRecords].map((song) => (
-    <Card
+    <SongCard
       img={song.albumArtUrl}
-      text={song.name}
+      text={`${song.name} by ${song.artists.toString()}`}
       alt="record"
     />
   ));
