@@ -7,6 +7,7 @@ import SyncContainer from '../syncContainer';
 import BrowseContainer from '../browseConatiner';
 import PopContainer from '../popContainer';
 import RockContainer from '../rockContainer';
+import BollywoodContainer from '../bollywoodContainer';
 import Header from '../header';
 
 const App = () => (
@@ -25,6 +26,9 @@ const App = () => (
         </Route>
         <Route exact path="/rock">
           <RockContainer />
+        </Route>
+        <Route exact path="/bollywood">
+          <BollywoodContainer />
         </Route>
         <Route exact path="*">
           <BrowseContainer />
