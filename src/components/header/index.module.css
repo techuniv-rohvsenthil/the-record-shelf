@@ -1,0 +1,17 @@
+.headerBar{
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    background-color: rgb(73, 182, 0); 
+}
+
+.normalText{
+    display: flex;
+    font-family: 'Poppins';
+    margin: 1rem;
+}
+
+.bolderText{
+    display: flex;
+    font-weight: bold;
+}
