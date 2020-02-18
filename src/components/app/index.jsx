@@ -8,6 +8,7 @@ import BrowseContainer from '../browseConatiner';
 import PopContainer from '../popContainer';
 import RockContainer from '../rockContainer';
 import BollywoodContainer from '../bollywoodContainer';
+import CountryContainer from '../countryContainer';
 import Header from '../header';
 
 const App = () => (
@@ -29,6 +30,9 @@ const App = () => (
         </Route>
         <Route exact path="/bollywood">
           <BollywoodContainer />
+        </Route>
+        <Route exact path="/country">
+          <CountryContainer />
         </Route>
         <Route exact path="*">
           <BrowseContainer />
