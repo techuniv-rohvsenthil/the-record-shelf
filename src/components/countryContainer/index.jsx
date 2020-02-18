@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './index.module.css';
-import Card from '../card';
+import SongCard from '../songCard';
 
 
 const CountryContainer = () => {
@@ -17,7 +17,7 @@ const CountryContainer = () => {
     i += 1;
   }
   const countryRecs = [...countryRecords].map((song) => (
-    <Card
+    <SongCard
       img={song.albumArtUrl}
       text={song.name}
       alt="record"
